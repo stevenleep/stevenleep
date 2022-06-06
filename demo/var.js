@@ -17,3 +17,22 @@ function varDefine() {
   console.log("循环变量222", i); // 10
 }
 varDefine();
+
+function letDefine() {
+  console.log("不存在所谓的声明提升", a); // ReferenceError， a is not defined
+  let a = 1;
+
+  let b = 2;
+  // let b = 4; // Cannot redeclare block-scoped variable 'b'
+
+  // block-scoped variables are not hoisted
+  // for形成块级作用域
+  for (let i = 0; i < 10; i++) {
+    console.log("循环变量", i); // 1..9
+  }
+  console.log("循环变量222", i); // ReferenceError， i is not defined
+
+  let d = 5;
+  console.log("", window.d); // undefined
+}
+letDefine();
