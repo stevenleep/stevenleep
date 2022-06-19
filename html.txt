@@ -1,0 +1,29 @@
+1. 为什么需要使用DOCTYPE?
+    - 历史发展原因在HTML发展过程中出现了各种版本 XML/XHTML, 甚至停滞一段时间的发展，后面由于Apple、Opera、Mozilla几家的组建了一个小组的推动，逐步规范
+    - 在HTML4上面基于了很多的XHTML进行扩展，使得必须DTD
+    - HTML5 DOCTYPE 来标识是什么样的版本
+2. Cookie、SessionStorage、LocalStorage区别?
+    ------------ cookie ------ sessionStorage ------ localStorage ------
+    谁有权：      客户端/服务端   客户端                  客户端
+    大小：        4KB           5MB                    5MB
+    过期：        手动的         session                forever
+    http携带      自动携带       不会                    不会
+    可访问性      任何窗口        相同Tab                 任何窗口
+3. script、async、defer
+    -----------       script ------- async -------    defer --------
+    阻止HTML解析：        是           否（并行）           否（并行）
+    脚本立即执行：        是            是（解析完HTML后）    否（解析完HTML后、安装脚本出现的顺序执行）       
+4. link和script放置顺序问题
+    link css放置在顶部是可以更快速的执行到CSSOM（CSS对象模型）的解析，这个时候DOM也在执行，可以更快的看到效果
+    script 放置在顶部遇到js会阻止html的解析，整体感觉会出现白屏情况
+5. xss和防范
+    - 参考root/xss实现（反射型xss）
+    - 存储型：这个在写入了数据库下次获取的时候被执行，或者serverless场景中比较多
+    - DOM型常在类似动态生成DOM节点时候, 数据中带有特殊字符串以至于满足了DOM节点的闭合状态（然后会被注入危险代码和事件）
+        - 真实案例：定制化项目的Plugin中出现过
+    - 防范：
+        1. httpOnly
+        2. 输入输出数据不可信, 做字符化、转换处理
+        3. csp内容安全策略（简单说：百名单<控制哪一些脚本可以自执行和下载>）
+6. CSRF
+    - 跨站请求伪造：受信任（可能来自其他受害者、Cookie）的用户像服务端非预期请求

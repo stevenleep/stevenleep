@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+<body>
+    <h1>反射型的XSS</h1>
+    <a href="http://localhost:1337">模拟一个GET请求</a>
+
+    <br />
+    <br />
+    <a href="http://localhost:1337/login?url=http://www.baidu.com">模拟一个期望的重定向</a>
+    <a href="http://localhost:1337/login?url=<script>alert('2222')</script>">模拟假的</a>
+    <code>用户点击登录, 完成以后重定向到另一个页面</code>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cache</title>
+</head>
+
+<body>
+    <h2>Cache</h2>
+    <ul id="cache-btns">
+        <li>Expires：服务端默认设置的缓存3秒钟 <button data-cache="expires">re get</button></li>
+        <li>Pragma <button data-cache="pragma">re get</button></li>
+        <li>
+            Cache-Control: 具体策略根据下面👇参数 <button data-cache="cache-control">re get</button>
+        </li>
+    </ul>
+
+    <h2>Cache-Control</h2>
+    <form>
+        <div>
+            <input type="radio" name="cache-control" id="private" value="private" /> private
+            <input type="radio" name="cache-control" id="public" value="public" /> public
+            <input type="radio" name="cache-control" id="no-cache" value="no-cache" /> no-cache
+            <input type="radio" name="cache-control" id="no-store" value="no-store" /> no-store
+            <input type="radio" name="cache-control" id="max-age" value="max-age" /> max-age 服务端默认设置的缓存3秒钟
+            <input type="radio" name="cache-control" id="s-max-age" value="s-max-age" /> s-max-age 服务端默认设置的缓存3秒钟
+            <input type="radio" name="cache-control" id="must-revalidate" value="must-revalidate" /> must-revalidate
+            <input type="radio" name="cache-control" id="proxy-revalidate" value="proxy-revalidate" /> proxy-revalidate
+        </div>
+    </form>
+</body>
+
+<script>
+    const cacheButtons = document.querySelector("#cache-btns");
+    cacheButtons.addEventListener("click", function (e) {
+        const { type, isCacheEvent } = getCacheEvent(e);
+        if (isCacheEvent) {
+            console.log(`${type} cache event`);
+            request(type);
+        }
+    });
+
+    function getCacheEvent(e) {
+        const eventNode = e.target;
+        const cacheType = eventNode.dataset.cache;
+        const isCacheEvent = !!eventNode.dataset.cache;
+        return { type: cacheType, source: eventNode, isCacheEvent };
+    }
+
+    function getCacheControl(){
+        // const cacheControl = form.querySelector("input[name='cache-control']:checked").id;
+        // return cacheControl;
+        const form = document.querySelector("form");
+        return new FormData(form).get("cache-control");
+    }
+
+    function request(type) {
+       const cacheType = getCacheControl();
+       const url = type === "cache-control" 
+            ? type + (cacheType ? '?cache=' + getCacheControl()  : '')
+            : type;
+
+
+
+            
+        fetch("http://localhost:3000/" + url, {
+            method: "GET",
+            // headers: {} // headers 自定义后会触发Options请求(为了实验简洁暂不在这里设置)
+        })
+    }
+</script>
+
+</html>

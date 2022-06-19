@@ -1,0 +1,8 @@
+// type
+// string, number, boolean, null, undefined, bigint, symbol, object;
+
+/**
+ * object
+ *  
+ * Function、RegExp、Date、Error、Map、Set、WeakMap、WeakSet、Array、String、Number、Boolean、Null、Undefined、Symbol、ArrayBuffer、DataView、Int8Array、Uint8Array、Uint8ClampedArray、Int16Array、Uint16Array、Int32Array、Uint32Array、Float32Array、Float64Array
+ */
