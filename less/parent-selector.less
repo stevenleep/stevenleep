@@ -1,0 +1,64 @@
+.header {
+    .menu {
+      border-radius: 5px;
+      .no-borderradius & {
+        background-image: url('images/button-background.png');
+      }
+    }
+}
+// 结果
+.header .menu {
+    border-radius: 5px;
+}
+.no-borderradius .header .menu {
+    background-image: url('images/button-background.png');
+}
+
+
+// ------------------------------------------------------------------------------------
+.header {
+    .menu {
+        border-radius: 5px;
+        &>.text {
+            color: #fff;
+        }
+    }
+}
+
+// 结果
+.header .menu {
+    border-radius: 5px;
+}
+.header .menu >.text {
+    color: #fff;
+}
+
+
+// --------------------------------------------------------------------------------------
+p, a, li {
+    color: #fff;
+    & & {
+        color: red;
+    }
+}
+// 结果
+p, a, li {
+    color: #fff;
+}
+p p, a a, li li {
+    color: red;
+}
+
+p, a, li {
+    color: #fff;
+    &+& {
+        color: red;
+    }
+}
+// 结果
+p, a, li {
+    color: #fff;
+}
+p+p, a+a, li+li {
+    color: red;
+}
