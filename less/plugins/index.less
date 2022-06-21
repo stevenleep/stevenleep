@@ -1,0 +1,9 @@
+@plugin "plugin";
+
+.callback(@index, @title) {
+    color: #f00;
+}
+
+.test {
+    color: super-loop("call->.callback");
+}
