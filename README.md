@@ -1,29 +1,20 @@
-# My Code Snippets
+# Experimental Code Snippets
 
-## Less Example
-```less
-@viewport-height: 100vh;
-@viewport-padding-top: 20px;
-@viewport-padding-bottom: @viewport-padding-top;
-@banner-viewport-height: 200px;
+## rsmon
+一个猜想，期望使用rust的能力来替换nodemon，提高效率
 
-@global-box-sizing: border-box;
+- NAPI-RS 是一个使用Rust构建预编译来扩展Node的框架
+- notify 是一个Rust编写检测文件变化的库（默认处理了防抖等事情）
+- @napi-rs/notify 使用napi-rs将notify扩展为Node的库，可在Nodes使用rust notify
 
-.utils(@viewport-height: 100%, @already-used-height:0px, @sum-padding: 0px) {
-	@heightable: (@viewport-height - @already-used-height);
-	@calc-heightable: (calc(@viewport-height - @already-used-height));
-	@safe-content-height: calc(@viewport-height + @sum-padding);
-}
+## XSS
+反射型XSS攻击模拟实验
 
-.banner {
-  height: @banner-viewport-height;
-}
+## less
+一些less的用法和案例
 
-.content {
-  height: .utils(@viewport-height, .banner[height])[@calc-heightable];
-}
+## Cache
+HTTP expires/pragma/cache-control实验
 
-.content-2 when (@global-box-sizing = border-box) {
-  height: .utils(@viewport-height, @sum-padding: @viewport-padding-bottom + @viewport-padding-top)[@safe-content-height];;
-}
-```
+## queue-tree
+queue和tree转换的实验
