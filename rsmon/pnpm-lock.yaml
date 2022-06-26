@@ -1,0 +1,177 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@napi-rs/notify': ^0.0.1
+
+devDependencies:
+  '@napi-rs/notify': registry.npmmirror.com/@napi-rs/notify/0.0.1
+
+packages:
+
+  registry.npmmirror.com/@napi-rs/notify-android-arm64/0.0.1:
+    resolution: {integrity: sha512-A0VBen6scYpTaysFNKHpk/ZPDumB174BDGause7gd0kZ5qezwChMeCO+CibwScrri6Sc4fXxpNUR2yllZL531A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@napi-rs/notify-android-arm64/-/notify-android-arm64-0.0.1.tgz}
+    name: '@napi-rs/notify-android-arm64'
+    version: 0.0.1
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@napi-rs/notify-darwin-arm64/0.0.1:
+    resolution: {integrity: sha512-9EU3bK6tmA4D8akN5HF27S5SfkgZJd0e/KSj0nySPr06bBQWiBl4ymCveuiuv7NMzCoMVYCSMvEj/pZtt9rQdw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@napi-rs/notify-darwin-arm64/-/notify-darwin-arm64-0.0.1.tgz}
+    name: '@napi-rs/notify-darwin-arm64'
+    version: 0.0.1
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@napi-rs/notify-darwin-x64/0.0.1:
+    resolution: {integrity: sha512-iNiivDtbS5P8t1tqk4ibbV6N/iYbGK2lNEOhmh+KApzWORCM4EsRhIxTHVphGsakFZesas744hdectjmv8QL3Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@napi-rs/notify-darwin-x64/-/notify-darwin-x64-0.0.1.tgz}
+    name: '@napi-rs/notify-darwin-x64'
+    version: 0.0.1
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@napi-rs/notify-freebsd-x64/0.0.1:
+    resolution: {integrity: sha512-5ShImqBg9Ugu2L3scpOkKWNlMMCK/WvKTQdRsdS9aNvlTO3/dQVchtA5UwFXC/JEuKXJkuPlu40FhAlGF8qfxQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@napi-rs/notify-freebsd-x64/-/notify-freebsd-x64-0.0.1.tgz}
+    name: '@napi-rs/notify-freebsd-x64'
+    version: 0.0.1
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@napi-rs/notify-linux-arm-gnueabihf/0.0.1:
+    resolution: {integrity: sha512-w8eWymcamCGmJ+rcD1Fbg7UJJAdwbyKMAflBesDhWtK+ZzVBMx4DDDQnMPQy85Ilm5e4Oui3o5ikl52QYVfD0A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@napi-rs/notify-linux-arm-gnueabihf/-/notify-linux-arm-gnueabihf-0.0.1.tgz}
+    name: '@napi-rs/notify-linux-arm-gnueabihf'
+    version: 0.0.1
+    engines: {node: '>= 10'}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@napi-rs/notify-linux-arm64-gnu/0.0.1:
+    resolution: {integrity: sha512-0zMLsgr5mF4Qc0PbtPZfEyq2k/FYUb9Z/8jelV3ylxl8Zy5Gd7u0O+DBe3V7kd6T+TYvWzzbqtyYGFuPdy4dJQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@napi-rs/notify-linux-arm64-gnu/-/notify-linux-arm64-gnu-0.0.1.tgz}
+    name: '@napi-rs/notify-linux-arm64-gnu'
+    version: 0.0.1
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@napi-rs/notify-linux-arm64-musl/0.0.1:
+    resolution: {integrity: sha512-1/8LxJNftLpnSSiQuhnu+x8qXcNkb3DGj4fHjw+cg09DYFQOsclsAp/utyuOHYi0NFj61G70j1vjAWOrI1JmXQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@napi-rs/notify-linux-arm64-musl/-/notify-linux-arm64-musl-0.0.1.tgz}
+    name: '@napi-rs/notify-linux-arm64-musl'
+    version: 0.0.1
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@napi-rs/notify-linux-x64-gnu/0.0.1:
+    resolution: {integrity: sha512-i/fkvbfhefi6zDmoUyEhz0ry8iM7v48yUiylzsDp6CDZ7NIXBiNTzhyoGDvk4k1XqBODfQ8d/GuvBxp2wl8LEg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@napi-rs/notify-linux-x64-gnu/-/notify-linux-x64-gnu-0.0.1.tgz}
+    name: '@napi-rs/notify-linux-x64-gnu'
+    version: 0.0.1
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@napi-rs/notify-linux-x64-musl/0.0.1:
+    resolution: {integrity: sha512-85BuqLi/1Ea+oaVkGP3iCNM8fxIwQL4nMHqxjkc2VDa+9/g4tu+o6aaQ5ILOv9k60CkyRaVn9SM4ySwe3J/5UA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@napi-rs/notify-linux-x64-musl/-/notify-linux-x64-musl-0.0.1.tgz}
+    name: '@napi-rs/notify-linux-x64-musl'
+    version: 0.0.1
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@napi-rs/notify-win32-arm64-msvc/0.0.1:
+    resolution: {integrity: sha512-1QzArITvCDIWnR+iYDY3ActHwwQDSwV6EJm4H6ri4i+nrTWeProA+ISdqLFG/UpXRXPHsZBH3nwropWB0KVRJg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@napi-rs/notify-win32-arm64-msvc/-/notify-win32-arm64-msvc-0.0.1.tgz}
+    name: '@napi-rs/notify-win32-arm64-msvc'
+    version: 0.0.1
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@napi-rs/notify-win32-ia32-msvc/0.0.1:
+    resolution: {integrity: sha512-pZON4K4I6/z44T1uP7xOXpns2DM5fHyJaCEgnxD79rcYcg7kXjg5qReTpyVdXv9mijo3nNwSm3+WoPEhfyd2Kw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@napi-rs/notify-win32-ia32-msvc/-/notify-win32-ia32-msvc-0.0.1.tgz}
+    name: '@napi-rs/notify-win32-ia32-msvc'
+    version: 0.0.1
+    engines: {node: '>= 10'}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@napi-rs/notify-win32-x64-msvc/0.0.1:
+    resolution: {integrity: sha512-KC75jdyoA+rXKQr7U01MsKHpK58AZ70L3LwNymKrxL+X5T1l8nWs3xswvKA3msG08/8ct7ISmdukbWlUqu13ew==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@napi-rs/notify-win32-x64-msvc/-/notify-win32-x64-msvc-0.0.1.tgz}
+    name: '@napi-rs/notify-win32-x64-msvc'
+    version: 0.0.1
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@napi-rs/notify/0.0.1:
+    resolution: {integrity: sha512-U3ZLRgEBrbdk49mqwlwD6T7h5kEF5tJ7zAUwg3PxGLmQBxCuHvVgIrdM8semFhUxz8PxvAzD0axYrQrWy5k+eg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@napi-rs/notify/-/notify-0.0.1.tgz}
+    name: '@napi-rs/notify'
+    version: 0.0.1
+    engines: {node: '>= 10'}
+    dependencies:
+      '@node-rs/helper': registry.npmmirror.com/@node-rs/helper/1.3.3
+    optionalDependencies:
+      '@napi-rs/notify-android-arm64': registry.npmmirror.com/@napi-rs/notify-android-arm64/0.0.1
+      '@napi-rs/notify-darwin-arm64': registry.npmmirror.com/@napi-rs/notify-darwin-arm64/0.0.1
+      '@napi-rs/notify-darwin-x64': registry.npmmirror.com/@napi-rs/notify-darwin-x64/0.0.1
+      '@napi-rs/notify-freebsd-x64': registry.npmmirror.com/@napi-rs/notify-freebsd-x64/0.0.1
+      '@napi-rs/notify-linux-arm-gnueabihf': registry.npmmirror.com/@napi-rs/notify-linux-arm-gnueabihf/0.0.1
+      '@napi-rs/notify-linux-arm64-gnu': registry.npmmirror.com/@napi-rs/notify-linux-arm64-gnu/0.0.1
+      '@napi-rs/notify-linux-arm64-musl': registry.npmmirror.com/@napi-rs/notify-linux-arm64-musl/0.0.1
+      '@napi-rs/notify-linux-x64-gnu': registry.npmmirror.com/@napi-rs/notify-linux-x64-gnu/0.0.1
+      '@napi-rs/notify-linux-x64-musl': registry.npmmirror.com/@napi-rs/notify-linux-x64-musl/0.0.1
+      '@napi-rs/notify-win32-arm64-msvc': registry.npmmirror.com/@napi-rs/notify-win32-arm64-msvc/0.0.1
+      '@napi-rs/notify-win32-ia32-msvc': registry.npmmirror.com/@napi-rs/notify-win32-ia32-msvc/0.0.1
+      '@napi-rs/notify-win32-x64-msvc': registry.npmmirror.com/@napi-rs/notify-win32-x64-msvc/0.0.1
+    dev: true
+
+  registry.npmmirror.com/@napi-rs/triples/1.1.0:
+    resolution: {integrity: sha512-XQr74QaLeMiqhStEhLn1im9EOMnkypp7MZOwQhGzqp2Weu5eQJbpPxWxixxlYRKWPOmJjsk6qYfYH9kq43yc2w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@napi-rs/triples/-/triples-1.1.0.tgz}
+    name: '@napi-rs/triples'
+    version: 1.1.0
+    dev: true
+
+  registry.npmmirror.com/@node-rs/helper/1.3.3:
+    resolution: {integrity: sha512-p4OdfQObGN9YFy5WZaGwlPYICQSe7xZYyXB0sxREmvj1HzGKp5bPg2PlfgfMZEfnjIA882B9ZrnagYzZihIwjA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@node-rs/helper/-/helper-1.3.3.tgz}
+    name: '@node-rs/helper'
+    version: 1.3.3
+    dependencies:
+      '@napi-rs/triples': registry.npmmirror.com/@napi-rs/triples/1.1.0
+    dev: true
