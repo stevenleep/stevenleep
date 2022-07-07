@@ -2,6 +2,7 @@
 
 ## prototype
 原型和原型链分析图
+![原型与原型链图](./prototype/prototypeAnd__proto__.png)
 
 ## rsmon
 一个猜想，期望使用rust的能力来替换nodemon，提高效率
