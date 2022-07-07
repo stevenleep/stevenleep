@@ -1,5 +1,8 @@
 # Experimental Code Snippets
 
+## prototype
+原型和原型链分析图
+
 ## rsmon
 一个猜想，期望使用rust的能力来替换nodemon，提高效率
 
