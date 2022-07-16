@@ -1,0 +1,23 @@
+@plugin "plugin";
+@plugin "realpx";
+
+.callback(@index, @title) {
+    color: #f00;
+}
+
+.a {
+    width: 300px;
+}
+
+.b {
+    width: 500px;
+}
+
+.test {
+    color: sum(20px, .a[width] + .b[width]);
+}
+
+.testRealPX {
+    color: green;
+    width: realpx(100vw, .b[width]);
+}

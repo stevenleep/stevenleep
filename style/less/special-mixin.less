@@ -1,0 +1,35 @@
+// @todo arguments
+// @todo reset
+
+// mixin函数
+// --------------------------------------------------
+
+// 案例一
+.func(@viewport: 100vh,@height:100px, @padding: 20px) {
+  @calcHeight: (calc(@viewport - (@height + @padding)));
+}
+@viewport-height: 1200px;
+@banner-height: 500px;
+
+.banner {
+  height: @banner-height;
+}
+// 方式一：
+.content-height {
+  height: .func(@viewport-height, @banner-height) [ @calcHeight];
+}
+// 方式二：
+.content-height-2 {
+  height: .func(@viewport-height, .banner[height]) [ @calcHeight];
+}
+
+// 案例二
+.average(@x, @y) {
+  @s: ((@x + @y) / 2);
+  @f: (@x + @y);
+}
+div {
+  // call a mixin and look up its final value
+  padding: .average(16px, 50px) [ @s];
+  width: .average(20px, 60px) [ @f];
+}

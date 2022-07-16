@@ -1,0 +1,59 @@
+// 特殊的变量使用方式
+// 插值变量
+
+
+// import 声明
+// -----------------------------------------------------------
+@fonts-less-path: "../common/fonts";
+@color-less-path: "../common/color";
+// usage example
+@import "@{fonts-less-path}/main.less";
+@import "@{color-less-path}/main.less";
+
+// 结果
+@import "../common/fonts/main.less";
+@import "../common/color/main.less";
+
+
+// 选择器
+// -----------------------------------------------------------
+@oocss-selector-prefix: "oocss-";
+// usage example
+.@{oocss-selector-prefix}-page {
+  color: red;
+}
+// 结果
+.oocss-page {
+  color: red;
+}
+
+// URL
+// -----------------------------------------------------------
+@url-prefix: "http://img.simicul.com/images";
+// usage example
+.banner {
+  background-image: url("@{url-prefix}/banner.jpg");
+}
+// 结果
+.banner {
+  background-image: url("http://img.simicul.com/images/banner.jpg");
+}
+
+
+// 使用另一个变量来定义变量名
+// -----------------------------------------------------------
+@primary:  green;
+@secondary: blue;
+
+.section {
+  @color: primary;
+
+  .element {
+    color: @@color; // color: @primary;
+  }
+}
+
+// 结果
+.section {
+  color: green;
+}

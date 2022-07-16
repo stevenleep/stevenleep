@@ -1,0 +1,20 @@
+.base-title {
+    color: antiquewhite;
+}
+
+// method 1
+.special-title {
+  font-size: 1.5em;
+}
+.special-title:extend(.base-title) {
+    color: #f00;
+    background-color: aquamarine;
+}
+
+// method 2
+.special-title {
+    &:extend(.base-title) {
+        color: #f00;
+        background-color: aquamarine;
+    }
+}

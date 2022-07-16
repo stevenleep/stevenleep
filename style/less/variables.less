@@ -1,0 +1,76 @@
+// normal variables
+
+@primary: #00bcd4;
+.test {
+  color: @primary;
+}
+
+// 结果
+.test {
+  color: #00bcd4;
+}
+
+// default variables
+// ---------------------------------------------------------------------------------
+// library.less
+@base-color: #fff;
+@base-background-color: #fff;
+@dark-color: darken(@base-color, 5%);
+
+// main colors
+@import "./library.less";
+@base-color: red;
+// 结果： @base-color: red; @dark-color 也会因为 @base-color 被覆盖而变成 red/5%;
+
+// $prop
+// 可以将任何的属性以$prop的形式作为变量使用
+// ---------------------------------------------------------------------------------
+.parent {
+  color: red;
+  .child {
+    background-color: $color;
+  }
+}
+// 结果： .parent { color: red; } .parent .child { background-color: red; }
+
+// 顺序，后面的同名属性覆盖前面的
+// ---------------------------------------------------------------------------------
+.parent {
+  color: red;
+  .child {
+    background-color: $color;
+  }
+  color: blue;
+}
+// 结果： .parent { color: blue; } .parent .child { background-color: blue; }
+.parent {
+  --color: red;
+  .child {
+    background-color: var(--color);
+  }
+  --color: blue;
+}
+// 结果： .parent { color: blue; } .parent .child { background-color: blue; }
+
+// lazy-eval
+// 变量不一定需要定义在前面
+// ---------------------------------------------------------------------------------
+.lazy-eval {
+  width: @var;
+  @a: 9%;
+}
+@var: @a;
+@a: 100%;
+// 结果： .lazy-eval { width: 9%; }
+
+@var: 0;
+.class {
+  @var: 1;
+  .brass {
+    @var: 2;
+    three: @var;
+    @var: 3;
+  }
+  one: @var;
+}
+// 结果： .class { one: 1 }; .class .brass { three: 3 };
