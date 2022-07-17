@@ -1,1 +1,2 @@
 import "./instanceof";
+import "./typeof";
