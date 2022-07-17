@@ -1,2 +1,1 @@
-const a = [];
-a instanceof Array;
+import "./instanceof";
