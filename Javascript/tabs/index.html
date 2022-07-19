@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mockTabs</title>
+  </head>
+  <body>
+    <ul class="tabs-container"></ul>
+    <button class="focus-tab" type="button">focusFirstTab</button>
+    <button class="focus-tab1" type="button">focusSecondTab</button>
+  </body>
+  <script>
+    const tabConfigs = [
+      { name: "TabA", url: "https://pnpm.io/zh/motivation", mode: "_blank" },
+      { name: "TabB", url: "https://www.google.com", mode: "_blank" },
+    ];
+    const tabTasks = tabConfigs.map(
+      (config) => () => window.open(config.url, config.mode)
+    );
+
+    const openTabs = [];
+
+    start();
+    focusFirstTab();
+    focusSecondTab();
+
+    function start() {
+      const tabsContainer = document.querySelector(".tabs-container");
+      tabsContainer.append(createTabUI(tabConfigs));
+      let prevTabWindow = null;
+      tabsContainer.addEventListener("click", (e) => {
+        const target = e.target;
+        if (target.classList.contains("tab")) {
+          const index = target.dataset.index;
+          const tabWindow = tabTasks[index]();
+          console.log(tabWindow, tabWindow.closed);
+          openTabs.push(tabWindow);
+        }
+      });
+    }
+
+    function focusFirstTab() {
+      document.querySelector(".focus-tab").addEventListener("click", (e) => {
+        const tabWindow = openTabs[0];
+        tabWindow.focus();
+      });
+    }
+
+    function focusSecondTab() {
+      document.querySelector(".focus-tab1").addEventListener("click", (e) => {
+        const tabWindow = openTabs[1];
+        tabWindow.focus();
+      });
+    }
+
+    function createTabUI(tabConfigs = []) {
+      const fragment = document.createDocumentFragment();
+      tabConfigs.forEach((tabConfig, index) => {
+        const tab = document.createElement("li");
+        tab.classList.add("tab");
+        tab.setAttribute("data-index", index);
+        tab.innerHTML = tabConfig.name;
+        fragment.appendChild(tab);
+      });
+      return fragment;
+    }
+  </script>
+</html>
