@@ -5,4 +5,3 @@
 
 *Products I ship:*
 - *ShopLink: Cross-border conversion engine (PWA+Push)*
-- *SoloPace: WireGuard®-powered SD-WAN*
